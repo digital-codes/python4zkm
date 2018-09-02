@@ -35,12 +35,16 @@ feed = feedparser.parse( tazfeed )
 print("----------------------------")
 print("TAZ\n\n")
 
+# show just 1 in a window
+wincnt = 1
 for e in feed.entries:
     print(e.date, e.title)
     for c in e.content:
         if c.type == "text/html":
             print(hp.handle(c.value))
-            show(hp.handle(c.value))
+            if wincnt > 0:
+                show(hp.handle(c.value))
+                wincnt -= 1
             
     print("\n\n")
     
