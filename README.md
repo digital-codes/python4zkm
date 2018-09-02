@@ -1,2 +1,4 @@
 # python4zkm
-Introductionary Python3 sample related to basics of data and visualization
+Introductionary Python3 samples related to basics of data and visualization
+https://open-codes.zkm.de/en
+
