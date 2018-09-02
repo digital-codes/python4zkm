@@ -2,7 +2,7 @@ import feedparser
 import html2text
 
 import numpy as np
-import pylab as plt
+import matplotlib.pyplot as plt
 import time
 
 
