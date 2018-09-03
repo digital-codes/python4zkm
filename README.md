@@ -27,7 +27,12 @@ In addition, you need the following packages in your system installation:
   * OpenCV3 for image processing
   *  * This is only required for on sampe (trap). It also requires the presence of a
   *  * basic VisualStudio installation. Please refer to the OpenCV3 tutorials like
-  *  * here: https://docs.opencv.org/master/d3/d52/tutorial_windows_install.html
+  *  * here: https://docs.opencv.org/master/d3/d52/tutorial_windows_install.htm
+  *  For stockParse you need an API key from Quandl (the stock data provider)
+  *  * Sign up for a free key at https://quandl.com and add the key to a file
+  *  * private.py with the content:
+  *  * * quandl_key = "<the key you got from quandl>"
+  *  * stockParse imports the key from this private file
 
 The samples have been tested on Linux and Windows using Python3 version 3.6
 
