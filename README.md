@@ -48,11 +48,11 @@ and on internal (relative) urls like
 
 Image via external URL:
 
-![Img Test](https://github.com/digital-codes/python4zkm/blob/master/data/github.png =200x200)
+![Img Test](https://github.com/digital-codes/python4zkm/blob/master/data/github.png)
 
 Image via relative URL:
 
-![Internal Img Test](../master/data/github.png?raw=true)
+![Internal Img Test](../master/data/github.png?raw=true =200x200)
 
 
 Via HTML:
