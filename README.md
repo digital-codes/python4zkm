@@ -36,5 +36,23 @@ In addition, you need the following packages in your system installation:
 
 The samples have been tested on Linux and Windows using Python3 version 3.6
 
+Testing image embedding ...
+
+This should work on external urls like
+
+`` ![Bilby Stampede](http://example.com/images/logo.png)
+
+and on internal (relative) urls like
+
+``  ![Image](../blob/master/public_html/img/nokia.png?raw=true)
+
+Image via external URL:
+
+![Img Test](https://github.com/digital-codes/python4zkm/blob/master/data/github.png)
+
+Image via relative URL:
+
+![Internal Img Test](../data/github.png?raw=true)
+
 
 
