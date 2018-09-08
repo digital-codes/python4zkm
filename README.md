@@ -52,7 +52,7 @@ Image via external URL:
 
 Image via relative URL:
 
-![Internal Img Test](../master/data/github.png?raw=true =200x200)
+![Internal Img Test](../master/data/github.png?raw=true)
 
 
 Via HTML:
