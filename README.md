@@ -41,13 +41,9 @@ The samples have been tested on Linux and Windows using Python3 version 3.6
 
 ###########################
 
-Image via external URL:
+Hint on links and image urls:
 
->  ![Img Test](https://github.com/digital-codes/python4zkm/blob/master/data/github.png)
-
-Image via relative URL:
-
-> ![Internal Img Test](../master/data/github.png?raw=true)
+Relative links:  (../master/data/github.png?raw=true)
 
 
 
