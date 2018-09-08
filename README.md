@@ -48,7 +48,7 @@ and on internal (relative) urls like
 
 Image via external URL:
 
-![Img Test](https://github.com/digital-codes/python4zkm/blob/master/data/github.png)
+![Img Test](https://github.com/digital-codes/python4zkm/blob/master/data/github.png =200x200)
 
 Image via relative URL:
 
