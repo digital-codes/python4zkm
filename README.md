@@ -43,16 +43,12 @@ The samples have been tested on Linux and Windows using Python3 version 3.6
 
 Image via external URL:
 
-![Img Test](https://github.com/digital-codes/python4zkm/blob/master/data/github.png)
+>  ![Img Test](https://github.com/digital-codes/python4zkm/blob/master/data/github.png)
 
 Image via relative URL:
 
-![Internal Img Test](../master/data/github.png?raw=true)
+> ![Internal Img Test](../master/data/github.png?raw=true)
 
-
-Via HTML:
-
-<img src="https://github.com/digital-codes/python4zkm/blob/master/data/github.png" width="200">
 
 
 
