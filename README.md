@@ -55,4 +55,12 @@ Image via relative URL:
 ![Internal Img Test](../master/data/github.png?raw=true)
 
 
+Via HTML:
+
+<img src="https://github.com/digital-codes/python4zkm/blob/master/data/github.png" width="200">
+
+
+
+
+
 
