@@ -52,7 +52,7 @@ Image via external URL:
 
 Image via relative URL:
 
-![Internal Img Test](../data/github.png?raw=true)
+![Internal Img Test](../master/data/github.png?raw=true)
 
 
 
