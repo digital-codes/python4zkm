@@ -1,9 +1,9 @@
 # python4zkm
 Introductionary Python3 samples related to the very basics of data and visualization.
 
-Inspired by and used during an "action-tour" at the "open codes" exhibition at the ZKM, Karlsruhe, Germany
+Inspired by and used during an "action-tour" at the "open codes" exhibition at the 
+[ZKM](https://open-codes.zkm.de/en), Karlsruhe, Germany
 
-See https://open-codes.zkm.de/en
 
 <img src="https://zkm.de/media/styles/r17_1280/public/bild/ocii_plakat_dina1_final.jpg?itok=77xfS05w&c=e425af2cad7290dca592b01cdf1b1ca4" width="250">
 
