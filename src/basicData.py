@@ -22,7 +22,7 @@ pygame.init()
 # requires the wave module to be available
 # if not, we have to skip to the part where
 # we create the data ourselves ...
-soundFile = "otto.wav"
+soundFile = "../data/otto.wav"
 # the we load the file into a variable
 spf = wave.open(soundFile,'r')
 
@@ -75,13 +75,17 @@ plt.show()
 # try to use numbers and/or make a longer array
 print("try to use numbers and/or make a longer array")
 
-# the make a longer array from your text and play as audio file
+# make a longer array from your text and play as audio file
 # refresh text
 signal = "dqpinfqfmmdqwüpdqwpdqwüodmopmodpwndeniqwqwnfojqnwd"
 # make list longer
 longSignal = signal * 100
 # create array
 longSignal = np.fromstring(longSignal, "int16")
+# plot the new signal ....
+plt.plot(longSignal[0:100])
+plt.title('High pitch sound signal from text ...')
+plt.show()
 # play
 sd = pygame.mixer.Sound(longSignal)
 sd.play()
@@ -92,6 +96,10 @@ while pygame.mixer.get_busy():
 time.sleep(.5)
 # make a lower tone by repeating each element individually
 longSignal = np.repeat(longSignal, 4)
+# plot the new signal ....
+plt.plot(longSignal[0:100])
+plt.title('Low pitch sound signal from text ...')
+plt.show()
+# play
 sd = pygame.mixer.Sound(longSignal)
 sd.play()
-# plot the new signal ....

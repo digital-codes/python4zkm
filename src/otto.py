@@ -15,7 +15,7 @@ import warnings
 warnings.filterwarnings('ignore', 'Using default event loop*',)
 
 ###########################
-with open("otto.txt","r",encoding="iso-8859-15") as infile:
+with open("../data/otto.txt","r",encoding="iso-8859-15") as infile:
 #with open("anders.txt","r",encoding="iso-8859-15") as infile:
      otto = infile.read()
      

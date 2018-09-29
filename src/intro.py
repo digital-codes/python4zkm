@@ -62,7 +62,7 @@ for i in range(0,4):
 
 # Alternatively, we can use the "in" operator
 for cc in c:
-    print("Element is : ",cc)
+    print("(next) element is : ",cc)
 # Again, we have the ":" and the indentation
 # This time, we don't have an explicit index
 # but we don't need to check the index range any more
@@ -82,12 +82,12 @@ nf = np.array(c,"float")
 print("Variable nf (numpy) is: ",nf)
 
 # there are a few more differences, e.g on multiplication
-print("Multiply the list by 2 give a list with twice as many items: \n",2*c)
-print("Multiply the array by 2 multiplies the elements: ",2*nc)
+print("Multiply the basic list by 2 gives a list with twice as many items: \n",2*c)
+print("Multiply the numpy array by 2 multiplies the elements: ",2*nc)
 
 # we can also turn the text into a numpy array
 nt = np.fromstring(b,"uint8")
-print("Variable nt from ",b," as unisgned integer array (uint) is: ",nt)
+print("Variable nt from text variable b(\"",b,"\") as unisgned integer array (uint) is: ",nt)
 
 #####################################
 # you can type more instructions directly in the python shell
