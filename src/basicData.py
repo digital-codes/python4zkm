@@ -5,6 +5,7 @@ import wave
 import sys
 import pygame
 import time
+import os
 
 
 #playing and plotting data from a wave file
@@ -22,10 +23,19 @@ pygame.init()
 # requires the wave module to be available
 # if not, we have to skip to the part where
 # we create the data ourselves ...
-soundFile = "../data/otto.wav"
+soundFile = "otto.wav"
 # the we load the file into a variable
-spf = wave.open(soundFile,'r')
-
+try:
+    spf = wave.open(soundFile,'r')
+except FileNotFoundError:
+    soundFile = os.path.join("..","data",soundFile)
+    print("New file:", soundFile)
+    try:
+        spf = wave.open(soundFile,'r')
+    except FileNotFoundError:
+        print("no file")
+        sys.exit()
+    
 #Extract Raw Audio from Wav File, we don't play
 # the whole file
 signal = spf.readframes(20000 )#-1)
@@ -71,9 +81,6 @@ signal -= min(signal)
 plt.title('Text Wave ...')
 plt.plot(signal)
 plt.show()
-
-# try to use numbers and/or make a longer array
-print("try to use numbers and/or make a longer array")
 
 # make a longer array from your text and play as audio file
 # refresh text
