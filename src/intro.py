@@ -48,6 +48,29 @@ print("Element ",d," of variable c is: ",c[d])
 # it's better to comment this code out by placing a "#"
 # at the start of the line
 
+# input options
+
+print("Example demonstating keyboard input\n")
+
+a1 = input("Raw input, text or number\n")
+print("type: ",type(a1),", value: ",a1)
+
+a2 = eval(input("Evaluated input, text, number, list or dict. Text enclosed in \"\"\n"))
+print("type: ",type(a2),", value: ",a2)
+
+a3,b1 = eval(input("Evaluated input, 2 entries as before, separated by ,\n"))
+print("A - type: ",type(a3),", value: ",a3)
+print("B - type: ",type(b1),", value: ",b1)
+
+a4 = eval(input("Evaluated input, 2 entries as before, separated by ,\n"))
+
+if "tuple" in str(type(a4)) or "list" in str(type(a4)):
+    for aa in a4:
+        print("type: ",type(aa),", value: ",aa)
+else:   
+    print("type: ",type(a4),", value: ",a4)
+
+
 
 # we can iterate of all elements in a list in different ways
 # with a for loop:
@@ -62,7 +85,7 @@ for i in range(0,4):
 
 # Alternatively, we can use the "in" operator
 for cc in c:
-    print("(next) element is : ",cc)
+    print("Element is : ",cc)
 # Again, we have the ":" and the indentation
 # This time, we don't have an explicit index
 # but we don't need to check the index range any more
@@ -82,12 +105,12 @@ nf = np.array(c,"float")
 print("Variable nf (numpy) is: ",nf)
 
 # there are a few more differences, e.g on multiplication
-print("Multiply the basic list by 2 gives a list with twice as many items: \n",2*c)
-print("Multiply the numpy array by 2 multiplies the elements: ",2*nc)
+print("Multiply the list by 2 give a list with twice as many items: \n",2*c)
+print("Multiply the array by 2 multiplies the elements: ",2*nc)
 
 # we can also turn the text into a numpy array
 nt = np.fromstring(b,"uint8")
-print("Variable nt from text variable b(\"",b,"\") as unisgned integer array (uint) is: ",nt)
+print("Variable nt from ",b," as unisgned integer array (uint) is: ",nt)
 
 #####################################
 # you can type more instructions directly in the python shell
