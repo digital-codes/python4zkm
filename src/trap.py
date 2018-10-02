@@ -2,15 +2,15 @@ import cv2
 import numpy
 
 # using clean image or not
-cleanImg = True
+cleanImg = False #True
 
 # source for the image is here:
 # https://open-codes.zkm.de/sites/default/files/styles/catalog_full/public/artwork/342-autonomous-trap-001.jpg?itok=j-TjIGfc
 
 if cleanImg:
-    file = "t3.jpg"
+    file = "../data/t3.jpg"
 else:
-    file = "t1.jpg"
+    file = "../data/t1.jpg"
     
 img0 = (cv2.imread(file,1)) # color mode
 img1 = cv2.cvtColor(img0, cv2.COLOR_BGR2GRAY) # gray
