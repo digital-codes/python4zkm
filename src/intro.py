@@ -12,6 +12,7 @@
 # It is used for various mathematical operations
 import numpy as np
 
+
 #####################################
 # you can type the instructions directly in the python shell
 # where you see the output.
@@ -154,6 +155,63 @@ print("Remember, the last index value is not included")
 
 # the dimensionality of an array are called a "shape"
 print("shape of n2d:", n2d.shape)
+
+# a simple for of a table is a weekly schedule like the following
+wd = np.zeros((4,7),dtype=np.uint8) # this time, we use a 0 initialized 2d array
+# columns go from Monday to Sunday
+# rows are daily activities like sleep, eat, work, fun
+# we put some numbers ....
+wd[0,:] = [8,8,8,8,8,8,8] # 8 hours of sleep (sigh)
+wd[1,:] = [2,2,2,2,2,3,3] # 
+wd[2,:] = [8,8,8,8,8,0,0] # so much work ...
+wd[3,:] = [6,6,6,6,6,15,15] # so much fun
+
+print("Our week schedule looks like so:\n", wd)
+
+# to show is graphically, we use the standard plotting library
+# matplotlib with the local name plt
+import matplotlib.pyplot as plt
+
+axs = plt.subplot(2,1,1)
+
+collabel=("MO","TU","WE","TH","FR","SA","SU") # this is a list but with round bracket
+# we can access values like with [] but we cannot change them. This is called a tuple
+rowlabel=("Sleep","Eat","Work","Fun")
+axs.axis('tight')
+axs.axis('off')
+rcols = ["white"] * len(wd)
+cecols = [["gray"] * len(wd[0])]*len(wd)
+clcols = ["green"] * len(wd[0])
+
+tbl = axs.table(cellText=wd,rowLabels=rowlabel,\
+                      colLabels=collabel,loc='center',\
+                      cellColours=cecols,\
+                      colColours=clcols,rowColours=rcols)
+tbl.auto_set_font_size(False)
+tbl.set_fontsize(14)
+tbl.scale(1.2, 1.4)
+l, b, w, h = axs.get_position().bounds
+axs.set_position([l + .1*w, b, w*.8, h])
+axs.set_title("Weekly schedule")
+
+tplot = plt.subplot(2,1,2)
+tplot.axis('off')
+tplot.clear()
+tplot.axis('off')
+txt = """
+the meaning of the table is very clear.
+however, if we remove the row and columns labels
+the context is completely lost and we have no idea
+what these number should tell us ...
+"""
+
+tplot.annotate(txt,\
+    xy=(1, 1), xytext=(.96,.94), xycoords="data", \
+    textcoords="axes fraction",ha="right", va="top", size=14)
+
+
+plt.show()
+
 
 
 
