@@ -137,7 +137,7 @@ print("We can also convert strings into numeric arrays")
 nt = np.fromstring(b,"uint8")
 print("Variable nt from ",b," as unisgned integer array (uint) is: ",nt)
 
-###########
+###########################################
 # so far, we've dealt with individual items and lists and their np eqivalent, arrays
 # a single list turns into an array with a single dimentsion
 # we can also have more dimensions, for example two
@@ -156,7 +156,7 @@ print("Remember, the last index value is not included")
 # the dimensionality of an array are called a "shape"
 print("shape of n2d:", n2d.shape)
 
-# a simple for of a table is a weekly schedule like the following
+# a simple example for of a table is a weekly schedule like the following
 wd = np.zeros((4,7),dtype=np.uint8) # this time, we use a 0 initialized 2d array
 # columns go from Monday to Sunday
 # rows are daily activities like sleep, eat, work, fun
@@ -168,10 +168,13 @@ wd[3,:] = [6,6,6,6,6,15,15] # so much fun
 
 print("Our week schedule looks like so:\n", wd)
 
+###########################################
 # to show is graphically, we use the standard plotting library
 # matplotlib with the local name plt
 import matplotlib.pyplot as plt
 
+# create a plotting figure with 2 areas, vertically spaced
+# this is the first one
 axs = plt.subplot(2,1,1)
 
 collabel=("MO","TU","WE","TH","FR","SA","SU") # this is a list but with round bracket
@@ -194,6 +197,7 @@ l, b, w, h = axs.get_position().bounds
 axs.set_position([l + .1*w, b, w*.8, h])
 axs.set_title("Weekly schedule")
 
+# this is the second one
 tplot = plt.subplot(2,1,2)
 tplot.axis('off')
 tplot.clear()
@@ -209,7 +213,7 @@ tplot.annotate(txt,\
     xy=(1, 1), xytext=(.96,.94), xycoords="data", \
     textcoords="axes fraction",ha="right", va="top", size=14)
 
-
+# show the figure
 plt.show()
 
 
