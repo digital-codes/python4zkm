@@ -14,7 +14,7 @@ from scipy import misc
 
 
 # textfile
-tf = "zkmaudio.txt"
+tf = "../data/zkmaudio.txt"
 tenc = "utf-8"
 #tenc = "iso-8859-15"
 
@@ -152,7 +152,7 @@ app.process_events()
 app.quit()
 
 #try to create sound version ...
-audioclip = AudioFileClip("zkmaudio.wav")
+audioclip = AudioFileClip("../data/zkmaudio.wav")
 videoclip = VideoFileClip("surfVideo.webm")
 l = videoclip.duration
 print("video length:",l)

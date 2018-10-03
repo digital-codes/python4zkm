@@ -18,7 +18,7 @@ iml = []
 lbl = []
 
 # read img
-imFile = "punk.png"
+imFile = "../data/punk.png"
 #im = misc.imread(imFile)
 im = imageio.imread(imFile)
 lb = "Original"
