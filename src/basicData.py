@@ -19,7 +19,7 @@ pygame.init()
 
 
 useWav = False
-fileBase = "otto"  # zkmaudio
+fileBase = "../data/otto"  # zkmaudio
 wavFile = fileBase + ".wav"
 txtFile = fileBase + ".txt"
 
@@ -47,7 +47,8 @@ else:
         #alternatively, we can plot from a string entered manually like so:
         signal = "dqpinfqfmmdqwpdqwpdqwodmopmodpwndeniqwqwnfojqnwd"
         print("Using ", signal)
-        
+
+    txtSignal = signal # make a copy of the text        
     signal = np.fromstring(signal.upper(), "uint8")
     sigMin = min(signal)
     signal -= min(signal)
@@ -101,7 +102,7 @@ plt.show()
 
 # 2d signal
 plt.figure()
-plt.title('A Signal Wave...')
+plt.title('Sequential numbers: A Wave display/timeseries...')
 plt.plot(signal)
 plt.get_current_fig_manager().full_screen_toggle() 
 plt.show()
@@ -112,7 +113,7 @@ ncols = np.trunc(np.sqrt(len(signal))) # get lower bound of square root
 signal = signal[:int(ncols*ncols)]  # take correct number of samples
 signal2d = np.reshape(signal, (-1, int(ncols))) # reshape
 plt.imshow(signal2d) # create image
-plt.title('A Signal Wave in 2D ...')
+plt.title('2D arranged numbers: An Image ...')
 plt.get_current_fig_manager().full_screen_toggle() 
 plt.show()
 
@@ -134,7 +135,7 @@ ha = hf.add_subplot(111, projection='3d')
 #ha.plot_surface(len(signal), len(signal), signal2d, color='b')
 ha.plot_surface(x,y, signal2d, color='b')
 
-plt.title('A Signal Wave in 3D ...')
+plt.title('3D-stlye arranged numbers: A Surface Plot ...')
 plt.get_current_fig_manager().full_screen_toggle() 
 plt.show()
 
@@ -176,8 +177,8 @@ for i in range(100):
 #plt.plot(longSignal[:100])
 plt.figure()
 plt.get_current_fig_manager().full_screen_toggle()
-plt.plot(longSignal[:100])
-plt.title('High pitch sound signal from text ...')
+plt.plot(longSignal[:100].astype(np.int8))
+plt.title('Turning numbers into sound: High pitch ...')
 plt.show()
 # play
 sd = pygame.mixer.Sound(longSignal)
@@ -193,9 +194,43 @@ longSignal = np.repeat(longSignal, 4)
 # plot the new signal ....
 plt.figure()
 plt.get_current_fig_manager().full_screen_toggle()
-plt.plot(longSignal[:100])
-plt.title('Low pitch sound signal from text ...')
+plt.plot(longSignal[:100].astype(np.int8))
+plt.title('Turning numbers into sound: Low pitch ...')
 plt.show()
 # play
 sd = pygame.mixer.Sound(longSignal[:sl])
 sd.play()
+
+#####################################
+# Load a video and show it with moviepy
+# Import everything needed to edit video clips
+from moviepy.editor import *
+
+clip = VideoFileClip("../data/ottos-mops.webm")
+fps = clip.fps
+dur = clip.duration
+sz = clip.size
+nframes = fps*dur
+
+fig = plt.subplot(1,2,1) #figure()
+plt.get_current_fig_manager().full_screen_toggle()
+fig.axis("off")
+plt.title('A sample video ...')
+
+if not useWav:
+    tfig = plt.subplot(1,2,2) 
+    tfig.axis("off")
+    tfig.annotate(txtSignal,\
+        xy=(1, 1), xytext=(.96,.94), xycoords="data", \
+        textcoords="axes fraction",ha="right", va="top", size=14)
+
+
+plt.ion()
+plt.show()
+
+for i in range(int(nframes)):
+    frame = np.array(clip.get_frame(i))
+    fig.imshow(frame)
+    plt.draw()
+    plt.pause(.05)
+    
