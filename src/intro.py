@@ -136,3 +136,26 @@ print("We can also convert strings into numeric arrays")
 nt = np.fromstring(b,"uint8")
 print("Variable nt from ",b," as unisgned integer array (uint) is: ",nt)
 
+###########
+# so far, we've dealt with individual items and lists and their np eqivalent, arrays
+# a single list turns into an array with a single dimentsion
+# we can also have more dimensions, for example two
+# a 2D array is widley know as a table
+
+# lets create an 2 d array with 3 rows and 4 columns, with type integer
+n2d = np.empty((3,4),dtype=np.int16)
+
+print("The array has 3 rows and 4 columns, but empty() \ndoes not set any data, so the values are random\n",n2d)
+
+# we can extract specific cells with 2 indices and/or ranges
+
+print("item 2 and 3 of the second row can be accessed like so:\n, n2d[1,1:3]\n",n2d[1,1:3])
+print("Remember, the last index value is not included")
+
+# the dimensionality of an array are called a "shape"
+print("shape of n2d:", n2d.shape)
+
+
+
+
+
