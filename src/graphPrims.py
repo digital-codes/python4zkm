@@ -33,6 +33,8 @@ draw = ImageDraw.Draw(im2)
 draw.rectangle((0, 33, 100, 66), fill=(0, 255, 0))
 draw.rectangle((0, 67, 100, 100), fill=(255, 0, 0))
 
+draw.ellipse((20, 20, 60,80), fill=(255, 255, 0), outline=(255,255,255))
+
 plt.imshow(im2)
 plt.show()
 
