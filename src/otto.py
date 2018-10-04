@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 #for windows speech, we need win32 stuff 
-import os
-if "windows" in os.name.lower():
+import platform
+if "windows" in platform.system().lower():
     import win32api
     import win32com.client
 import pyttsx3;
