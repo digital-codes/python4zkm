@@ -77,6 +77,8 @@ z3d = [signal[i] for i in range(min3d,max3d)]
 #label3d = [chr(signal[i]+sigMin)  for i in range(min3d,max3d)]
 label3d = ["%d" % (signal[i])  for i in range(min3d,max3d)]
 pntSize = 9 # 00
+
+plt.ioff()
 fig = plt.figure()
 ax = Axes3D(fig)
 ax.scatter(x3d,y3d,z3d, s= pntSize)
@@ -142,7 +144,6 @@ plt.show()
 
 ##### text display if not wav
 if not useWav:
-    #label3d = [chr(signal[i]+sigMin)  for i in range(min3d,max3d)]
     label3d = ["%c" % (signal[i]+sigMin)  for i in range(min3d,max3d)]
     pntSize = 0 
     fig = plt.figure()
@@ -163,6 +164,7 @@ if not useWav:
         #plt.pause(.001)
         angle += 3
         elevation += 10
+    plt.close()
 
 
 # for audio output, apply some mods
@@ -177,7 +179,7 @@ for i in range(100):
 #plt.plot(longSignal[:100])
 plt.figure()
 plt.get_current_fig_manager().full_screen_toggle()
-plt.plot(longSignal[:100].astype(np.int8))
+plt.plot(longSignal[:100].astype(np.uint8))
 plt.title('Turning numbers into sound: High pitch ...')
 plt.show()
 # play
@@ -194,7 +196,7 @@ longSignal = np.repeat(longSignal, 4)
 # plot the new signal ....
 plt.figure()
 plt.get_current_fig_manager().full_screen_toggle()
-plt.plot(longSignal[:100].astype(np.int8))
+plt.plot(longSignal[:100].astype(np.uint8))
 plt.title('Turning numbers into sound: Low pitch ...')
 plt.show()
 # play
@@ -212,17 +214,23 @@ dur = clip.duration
 sz = clip.size
 nframes = fps*dur
 
-fig = plt.subplot(1,2,1) #figure()
+fig = plt.subplot(1,3,1) #figure()
 plt.get_current_fig_manager().full_screen_toggle()
 fig.axis("off")
 plt.title('A sample video ...')
 
 if not useWav:
-    tfig = plt.subplot(1,2,2) 
+    tfig = plt.subplot(1,3,2) 
     tfig.axis("off")
     tfig.annotate(txtSignal,\
-        xy=(1, 1), xytext=(.96,.94), xycoords="data", \
-        textcoords="axes fraction",ha="right", va="top", size=14)
+        xy=(1, 1), xytext=(.4,.8), xycoords="data", \
+        textcoords="axes fraction",ha="left", va="top", size=14)
+
+    import wordcloud
+    wc = wordcloud.WordCloud().generate_from_text(txtSignal)
+    wfig = plt.subplot(1,3,3) 
+    wfig.axis("off")
+    wfig.imshow(wc)
 
 
 plt.ion()
