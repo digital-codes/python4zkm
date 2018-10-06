@@ -233,12 +233,23 @@ if not useWav:
     wfig.imshow(wc)
 
 
+
 plt.ion()
 plt.show()
+
+
+#############
+import os
+text = txtSignal.replace("\n",".").replace("..",".")
+lines = text.split(".")
+cmd = "/usr/bin/espeak -v german "
 
 for i in range(int(nframes)):
     frame = np.array(clip.get_frame(i))
     fig.imshow(frame)
     plt.draw()
     plt.pause(.05)
-    
+    if i < len(lines):
+        os.system(cmd + "\"" + lines[i] +"\"")
+    plt.pause(.1)
+
