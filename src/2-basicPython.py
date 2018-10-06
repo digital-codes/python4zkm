@@ -173,7 +173,11 @@ print(np.repeat(nc,2))
 
 # we can also turn the text into a numpy array
 print("We can also convert strings into numeric arrays")
+# fromstring is simple but has some issues on unicode strings
+# because some characters use more bytes than others
 nt = np.fromstring(b,"uint8")
+# a more correct way is to convert to a byte array, then to a buffer
+nt = np.frombuffer(bytearray(b,"utf-8"),"uint8")
 print("Variable nt from ",b," as unisgned integer array (uint) is: ",nt)
 
 ###########################################

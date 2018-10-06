@@ -217,7 +217,7 @@ nframes = fps*dur
 fig = plt.subplot(1,3,1) #figure()
 plt.get_current_fig_manager().full_screen_toggle()
 fig.axis("off")
-plt.title('A sample video ...')
+plt.title('Ottos Mops fort oder kommt ...')
 
 if not useWav:
     tfig = plt.subplot(1,3,2) 
