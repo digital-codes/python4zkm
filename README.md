@@ -7,7 +7,7 @@ Inspired by and used during an "action-tour" at the "open codes" exhibition at t
 
 <img src="https://zkm.de/media/styles/r17_1280/public/bild/ocii_plakat_dina1_final.jpg?itok=77xfS05w&c=e425af2cad7290dca592b01cdf1b1ca4" width="250">
 
-More information on the related artworks should be in the docs folder (hopefully soon)
+More information on the related artworks is be in the [docs folder](../doc/opencodes.md)
 
 To run all samples you need to install the following modules:
 
@@ -48,11 +48,5 @@ In addition, you need the following packages in your system installation:
 
 The samples have been tested on Linux and Windows using Python3 version 3.6
 
-
-###########################
-
-Hint on links and image urls:
-
-Relative links:  (../master/data/github.png?raw=true)
 
 
