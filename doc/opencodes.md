@@ -33,7 +33,7 @@ Rybn used a fairly traditional display style of stock market data to introduce t
 In this contest, benefits are no longer driven by prices and other economic instruments, but by living organisms – soil, plants, bacteria; by supraterrestrial laws – environmental, astronomical, astrological; and by ancient or forbidden knowledge – esoterica, magic, geomancy. 
 All the algorithms follow their own non-mercantile and obsessive logic: some attempt to produce total and irreversible chaos; others try to influence market prices to make them look a given geometric shape. 
 
-Jörn Müller-Quade gives a close combination of math and visual art with [code beautiful like a clock](). Only a few lines of code are needed to generate images of particular beauty.
+Jörn Müller-Quade gives a close combination of math and visual art with [code beautiful like a clock](https://zkm.de/de/code-beautiful-like-a-clock). Only a few lines of code are needed to generate images of particular beauty.
 <img src="https://zkm.de/media/styles/r17_720_dynamic/public/bild/344-code-beautiful-clock.jpg?itok=WzJHJ-0B" width="250" style="margin-left:50px">
 
 >Many people find mechanical clocks appealing. No such aesthetic appeal is ascribed to computer programs, although they are mechanical in a similar way: fixed, predefined commands are executed to yield a result.
@@ -41,4 +41,23 @@ The “mechanics” of computer programs play out on a time scale that lies outs
 The exhibit is composed of three units: on the left is the program code, with an emphasis on the command that is being executed at a given moment. In the middle, the “inner life” of the processor with its registers, execution unit and memory is displayed in the act of executing a basic command. On the right, the result is visualized.
 A control knob changes the processing speed: when it is slowed down, individual steps become discernible, but their visible result is delayed. At a high speed, the result appears quickly, but the processor’s individual steps can no longer be observed.
 
-    
+Algorithmic structures generating features similar to living organism are visualized in [game of life](https://zkm.de/de/game-of-life) by Christian Lölkes.  
+<img src="https://zkm.de/media/styles/r17_720_dynamic/public/bild/334-game-life.jpg?itok=CsbmFelY" width="250" style="margin-left:50px">
+>In Conway’s Game of Life, a population simulation is carried out by a cellular automaton on a two-dimensional playing field according to a certain set of rules. The rules consist of four specifications that are applied depending on the number of neighbors (standard values): birth (an empty cell has exactly three neighbors), living on to the next generation (a live cell has two or three neighbors), death by loneliness (a cell has fewer than two living neighbors) and death by overcrowding (a cell has more than three living neighbors).
+This set of numbers provides the foundation for periodic structures to appear, run their course, and their termination. This simulation is also used in other areas, including in business and in the natural sciences. 
+
+A more complex algorithm - sorting of data - with simple graphics is combined with musical expression of the algorithmic procedure in [sound of sorting](https://zkm.de/de/sound-of-sorting) by Christian Lölkes.  
+<img src="https://zkm.de/media/styles/r17_720_dynamic/public/bild/335-sound-sorting.jpg?itok=rEyYH3zq" width="250" style="margin-left:50px">
+>Sorting processes are essential components of codes and algorithms in their everyday processing of data. They bring order to the data sets that is based on values and parameters, which they had received beforehand. Unlike humans, who solve such tasks in a way that is slower, more intuitive, and mainly visual, computers are challenged to execute tasks with maximum efficiency in terms of time, storage, and resources.
+For example, these processes sort search results by hit ratios, transport routes according to distance, or workflows by dependency on one other. Each process reaches the same goal with different procedures. If one then associates a sound with each data set and plays it, as soon as the sorting process edits this data set, unique rhythms and melodies emerge.
+
+Daniel Heiss' [cryptolab](https://zkm.de/de/kryptolab) has math as its primary topic: algorithms and machines used for bitcoin mining. Although complex and (often) energy-hungry the related block-chain mechanism is widely used in commercial projects.
+<img src="https://zkm.de/media/styles/r17_720_dynamic/public/bild/425-kryptolab.jpg?itok=UODWEf8j" width="250" style="margin-left:50px">
+>Mining is the process that is used to generate cryptographic currencies such as Bitcoin. Performing a Bitcoin transaction requires that hash values meeting certain requirements be found using bruteforce methods. After this hash value has been discovered, a new block of transactions is added to the blockchain. The first miner who finds a given hash value is also rewarded with a specified quantity of newly generated Bitcoins. The combined computing power of all miners taking part in the Bitcoin network is now many times greater than that of the world's TOP500 supercomputers.
+In »KryptoLab«, prospecting for digital gold takes place live on various forms of hardware. Here the rapid development of the hardware, from a simple workplace computer to a highly specialized ASIC miner from China, can also be traced. At a one-shot miner that was specially developed for the exhibition, visitors can press a button to try their luck at mining a block themselves and perhaps winning 12.5 Bitcoins as their reward. The odds of doing so, however, are far lower than the chances of winning the lottery.
+The values generated by the miners in »KryptoLab« are being made available to visitors in a series of workshops as part of the exhibition so that visitors can try out interacting with this abstract medium themselves.
+
+James Bridle's [autonomous trap](https://zkm.de/de/autonomous-trap-001) is a preview on future self-driving cars and the problems we have to expect. The fundamental challenge of autonomous driving basically is: making sense out of the massive amount of data generated by the car's sensors. The machine has to understand what it sees.
+<img src="https://zkm.de/media/styles/r17_720_dynamic/public/bild/autonomoustrap_jamesbridle.jpg?itok=ftr4AU60" width="250" style="margin-left:50px">
+
+## Code examples
