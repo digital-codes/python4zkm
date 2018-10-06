@@ -203,6 +203,32 @@ plt.show()
 sd = pygame.mixer.Sound(longSignal[:sl])
 sd.play()
 
+#important to wait until sound finished 
+while pygame.mixer.get_busy():
+    pass
+
+# and then to stop mixes, as it infers with espeak
+pygame.mixer.stop()
+
+##########################################
+# initialize speech output
+#for windows speech, we need win32 stuff 
+import platform
+if "windows" in platform.system().lower():
+    import win32api
+    import win32com.client
+import pyttsx3;
+
+# prepare speech
+engine = pyttsx3.init();
+voices = engine.getProperty('voices')
+for v in voices:
+    #print("voice:",v.name)
+    if "german" in v.name.lower(): #"german":
+        engine.setProperty('voice', v.id)
+        engine.setProperty("rate",150)
+        break
+
 #####################################
 # Load a video and show it with moviepy
 # Import everything needed to edit video clips
@@ -239,10 +265,9 @@ plt.show()
 
 
 #############
-import os
+# prepare text for speech output
 text = txtSignal.replace("\n",".").replace("..",".")
 lines = text.split(".")
-cmd = "/usr/bin/espeak -v german "
 
 for i in range(int(nframes)):
     frame = np.array(clip.get_frame(i))
@@ -250,6 +275,7 @@ for i in range(int(nframes)):
     plt.draw()
     plt.pause(.05)
     if i < len(lines):
-        os.system(cmd + "\"" + lines[i] +"\"")
-    plt.pause(.1)
+        engine.say(lines[i])
+        engine.runAndWait()
+    plt.pause(.1)        
 
