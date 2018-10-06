@@ -43,7 +43,7 @@ class Gol(pygame.sprite.Sprite):
         z.ga[self.x][self.y] = self.v
 
     def calc(self):
-        ### compute new value
+        ### compute new value based upon neighbours
         # compute sum of neighbours
         s = self.v
         if self.x > 1:
@@ -59,11 +59,11 @@ class Gol(pygame.sprite.Sprite):
         # 2 works well
         # 4 works well too
         # you can add more complicated things like
-        # birth ...
+        # birth and age ...
         # #################################################
         # here comes the fundamental rule of the game ...
-        # self.v = 1 if s == 2 or s == 4 else 0
-        self.v = 1 if s == 2 else 0
+        self.v = 1 if s == 2 or s == 4 else 0
+        # self.v = 1 if s == 2 else 0
         # #################################################
 
 # #################################################
