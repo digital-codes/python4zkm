@@ -98,6 +98,45 @@ if "tuple" in str(type(a4)) or "list" in str(type(a4)):
 else:   
     print("type: ",type(a4),", value: ",a4)
 
+################################################
+# by now, we have used some variables of different and a couple of functions
+# Functions are pieces of code written elsewhere, which do something usefull
+# like printing values or waiting for input
+# The functions we've used so for are print(), input(), type(), str() and eval()
+# all functions have ()-brackets and we put the values or objects between
+# the brakcets, the function sould work upon. We often call these things
+# in brackets "function parameters"
+# Many function don't only take parameters as inputs, they also return
+# values, very obviously seen with the "input()" function
+# Many functions are written by other people and are available
+# in libraries or modules (naming depends on language)
+# we can define out own functions too, like so:
+# def <name>(<params>):
+def printStr(s="",n=1):
+    """ A comment string with triple \" as the first line of a function definition 
+    is called docstring. It is useed to comment on the function's function. 
+    The docstring can be read by the member __doc__, in this case: printStr.__doc__
+    Our function will accept 2 paramters c and n and will print the string s  for n times
+    We initialize the paramters with and empty sting \"\" and 1, so if a parameter
+    is left out, the default value will be used
+    """
+    # we have to indent all instructions following the function definition
+    # we use a new kind of loop, the while loop
+    # which is executed while the condition is true
+    while n > 0:
+        print(s,end="") # normally, print terminates with a newline. here we don't
+        n -= 1
+    # that's it
+
+
+print("\n\nAbout functions ...")
+# we print the docstring:
+print("\ndocstring: ",printStr.__doc__)
+# let's call out function
+s,n = eval(input("Which string and how often"))
+printStr(s,n)
+print("\n")
+      
 
 ################################################
 # back to operation ...
