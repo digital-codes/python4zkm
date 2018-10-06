@@ -127,13 +127,13 @@ p1 = f.add_subplot(121)
 # setting the climit is important!
 p1.imshow(J,clim=(0,255))
 p1.axis('off')
-p1.set_title("RGB Colors")
+p1.set_title("RGB Colors\n\n")
 
 p2 = f.add_subplot(122)
 # setting the climit is important!
 p2.imshow(I2,clim=(0,255))
 p2.axis('off')
-p2.set_title("HSV Colors")
+p2.set_title("HSV Colors\nH down, S right\nV = 200")
  
 plt.show()
 
