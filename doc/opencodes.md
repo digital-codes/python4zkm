@@ -68,7 +68,7 @@ Credits go to a larger number of people who shared their ideas on publicly avail
 
 We start with a more general [excursion on data](../src/1-basicData.py) and their possible "interpretation". Next, we go into the very basics of [programming](../src/2-basicPython.py), using Python. Topics are variables, data types, functions and loops.
 
-This is followed by some simple [2D-graphics](../stc/3-simpleGraphics.py) because graphics is the most dominant interface. The graphics area is then further expanded introducing [colors](../src/4-colorGraphics.py), fundamental [image processing, animations and movies](../src/6-punk.py). We link more complex image processing with the [autonomous trap](../src/7-trackSegment.py) and finally create a movie of the [beautiful Julia-set](../src/8-juliaMovie.px) 
+This is followed by some simple [2D-graphics](../stc/3-simpleGraphics.py) because graphics is the most dominant interface. The graphics area is then further expanded introducing [colors](../src/4-colorGraphics.py), fundamental [image processing, animations and movies](../src/6-punk.py). We link more complex image processing with the [autonomous trap](../src/7-trackSegment.py) and finally create a movie of the [beautiful Julia-set](../src/8-juliaMovie.py) 
 
 We studiy the principles of [Game of life](../src/9-gol.py) and [Sound of Sorting](../src/10-soundOfSort.py) in brief examples. Despite including advanced programming mechanisms, the code should be fairly straightforward.
 
