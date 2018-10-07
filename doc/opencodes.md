@@ -18,7 +18,7 @@ Not all of our human senses can equally well be interfaced by digital technology
 Interfaces to taste, smell, skin sensing and balance are by far not on-par with the others.
 
 ## Artworks and Topics
-The topic "data" is introduced by the installation of <a name="dfield">Weibel and Lölkes</a>: [The World as a Field of Data](https://zkm.de/de/ausstellung/2017/10/open-codes). Data are taken from a large number of publicly avaialable feeds and displayed in a (more or less) uniform style.
+The topic "data" is introduced by the installation of <a name="dfield">Weibel and Lölkes</a>: [The World as a Field of Data](https://zkm.de/de/ausstellung/2017/10/open-codes). Data are taken from a large number of publicly available feeds and displayed in a (more or less) uniform style.
 
 <img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/40661157_10155767726086964_5582587217051648000_o.jpg?_nc_cat=0&oh=04b91aae92a54735eaaacc33b5484c29&oe=5C1DB4BC" width="250" style="margin-left:50px">
 
