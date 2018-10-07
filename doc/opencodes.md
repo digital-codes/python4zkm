@@ -1,5 +1,6 @@
 # OpenCodes
 ## The world as a field of data
+*German translation of this text [here](./opencodes_de.txt)*
 
 The exhibitions [OpenCodes](https://zkm.de/en/exhibition/2017/10/open-codes) at the [ZKM](https://open-codes.zkm.de/en), Karlsruhe, Germany, shows a broad range of digital artworks. For an computer engineering expert like me many (but not all) of the underlying approaches, algorithms or implementations are commonplace. However, the creative processes expressed in the artworks are nevertheless fascinating and inspiring.
 
