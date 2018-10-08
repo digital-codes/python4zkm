@@ -77,4 +77,9 @@ plt.close()
 
 animation = VideoClip(nextJulia, duration=30)
 # write the video file
-animation.write_videofile("julia.webm",preset="high",fps=25,audio=False)
+# webm format generates fairly small file, around 1MB
+# with mp4, preset controls quality. default is medium which gives about 1M file size
+# at low quality. Veryslow looks much better, but increases file size to ~30MB
+animation.write_videofile("julia.webm", fps=25,audio=False)
+#animation.write_videofile("julia.mp4", preset="veryslow",fps=25,audio=False)
+# you can also output other formats. See ffmpeg for more infos
