@@ -78,7 +78,7 @@ for cc in c:
 # input options
 # let's see how can we enter the data into the program
 
-print("Example demonstating keyboard input\n")
+print("Example demonstrating keyboard input\n")
 
 a1 = input("Raw input, text or number\n")
 print("type: ",type(a1),", value: ",a1)
@@ -114,10 +114,10 @@ else:
 # def <name>(<params>):
 def printStr(s="",n=1):
     """ A comment string with triple \" as the first line of a function definition 
-    is called docstring. It is useed to comment on the function's function. 
+    is called docstring. It is used to comment on the function's function. 
     The docstring can be read by the member __doc__, in this case: printStr.__doc__
-    Our function will accept 2 paramters c and n and will print the string s  for n times
-    We initialize the paramters with and empty sting \"\" and 1, so if a parameter
+    Our function will accept 2 parameters c and n and will print the string s for n times
+    We initialize the parameters with an empty string \"\" and 1, so if a parameter
     is left out, the default value will be used
     """
     # we have to indent all instructions following the function definition
@@ -133,7 +133,7 @@ print("\n\nAbout functions ...")
 # we print the docstring:
 print("\ndocstring: ",printStr.__doc__)
 # let's call out function
-s,n = eval(input("Which string and how often"))
+s,n = eval(input("Which string and how often? "))
 printStr(s,n)
 print("\n")
       
@@ -163,7 +163,7 @@ print("Variable nc (numpy) is: ",nc)
 nf = np.array(c,"float")
 print("Variable nf (numpy) is: ",nf)
 
-# there are a few more differences to lists, e.g on multiplication
+# there are a few more differences to lists, e.g. on multiplication
 print("Multiply the list by 2 give a list with twice as many items: \n",2*c)
 print("Multiply the array by 2 multiplies the elements: ",2*nc)
 print("With numpy arrays we have to use the append function to get longer arrays")
@@ -178,11 +178,11 @@ print("We can also convert strings into numeric arrays")
 nt = np.fromstring(b,"uint8")
 # a more correct way is to convert to a byte array, then to a buffer
 nt = np.frombuffer(bytearray(b,"utf-8"),"uint8")
-print("Variable nt from ",b," as unisgned integer array (uint) is: ",nt)
+print("Variable nt from ",b," as unsigned integer array (uint) is: ",nt)
 
 ###########################################
 # so far, we've dealt with individual items and lists and their np eqivalent, arrays
-# a single list turns into an array with a single dimentsion
+# a single list turns into an array with a single dimension
 # we can also have more dimensions, for example two
 # a 2D array is widley know as a table
 
