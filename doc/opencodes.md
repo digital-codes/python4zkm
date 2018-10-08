@@ -1,6 +1,6 @@
 # OpenCodes
 ## The world as a field of data
-*German translation of this text [here](./opencodes_de.txt)*
+*German translation - done by [Google](https://translate.google.de) - of this text [here](./opencodes_de.txt)*
 
 The exhibitions [OpenCodes](https://zkm.de/en/exhibition/2017/10/open-codes) at the [ZKM](https://open-codes.zkm.de/en), Karlsruhe, Germany, shows a broad range of digital artworks. For an computer engineering expert like me many (but not all) of the underlying approaches, algorithms or implementations are commonplace. However, the creative processes expressed in the artworks are nevertheless fascinating and inspiring.
 
@@ -67,11 +67,11 @@ Daniel Heiss' [Cryptolab](https://zkm.de/de/kryptolab) has math as its primary t
 ## Code examples
 All code samples are in the [source](../src) folder. Files ending with .py are pure Python3 files. Open them with an editor or an IDE like idle3. There are also 3 notebooks, ending with .ipynb, which are Python3 in a more convenient format for learning. The tool [jupiter-notebook](https://jupyter.org/) is required to open them.
 
-Credits go to a larger number of people who shared their ideas on publicly availably platforms (like this one) so I could go ahead and include  or adapt code fragments together with my own ideas.
+Credits go to a larger number of people who shared their ideas on publicly availably platforms (like this one) so I could go ahead and include  or adapt code fragments together with my own ideas. Credits also go to Ernst Jandl for the poem [Ottos Mops](../data/otto.txt) and to [Larva Labs](https://www.larvalabs.com/cryptopunks) for the [punk image](../data/punk.png). The files are copied from the depth of the internet. While giving nice results in the examples, they are neither very special, unique nor important and you can replace them with any other text or image you may find or create. 
 
 We start with a more general [excursion on data](../src/1-basicData.py) and their possible "interpretation". Next, we go into the very basics of [programming](../src/2-basicPython.py), using Python. Topics are variables, data types, functions and loops.
 
-This is followed by some simple [2D-graphics](../stc/3-simpleGraphics.py) because graphics is the most dominant interface. The graphics area is then further expanded introducing [colors](../src/4-colorGraphics.py), fundamental [image processing, animations and movies](../src/6-punk.py). We link more complex image processing with the [autonomous trap](../src/7-trackSegment.py) and finally create a movie of the [beautiful Julia-set](../src/8-juliaMovie.py) 
+This is followed by some simple [2D-graphics](../src/3-simpleGraphics.py) because graphics is the most dominant interface. The graphics area is then further expanded introducing [colors](../src/4-colorGraphics.py), fundamental [image processing, animations and movies](../src/6-punk.py). We link more complex image processing with the [autonomous trap](../src/7-trackSegment.py) and finally create a movie of the [beautiful Julia-set](../src/8-juliaMovie.py) 
 
 We studiy the principles of [Game of life](../src/9-gol.py) and [Sound of Sorting](../src/10-soundOfSort.py) in brief examples. Despite including advanced programming mechanisms, the code should be fairly straightforward.
 
