@@ -243,7 +243,7 @@ nframes = fps*dur
 fig = plt.subplot(1,3,1) #figure()
 plt.get_current_fig_manager().full_screen_toggle()
 fig.axis("off")
-plt.title('Ottos Mops fort oder kommt ...')
+plt.title('Ottos Mops hops ...')
 
 if not useWav:
     tfig = plt.subplot(1,3,2) 
@@ -259,9 +259,8 @@ if not useWav:
     wfig.imshow(wc)
 
 
-
 plt.ion()
-plt.show()
+#plt.show()
 
 
 #############
