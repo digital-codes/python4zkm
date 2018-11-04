@@ -1,31 +1,9 @@
-
-# coding: utf-8
-
-# In[40]:
-
-
 """Fundamental processing of game of live"""
 # we use numpy for 2d arraays
 import numpy as np
-# set dimension
-d = 8 # dimension
-a = np.zeros((d,d))
-print(a)
 
-
-# In[41]:
-
-
-for i in range(d):
-    for ii in range(d):
-        a[i,ii] = np.random.randint(0,2)
-print(a)
-
-
-# In[42]:
-
-
-def step(a):
+# function definition: this is the core part
+def step(a,d):
     """Compute the result array"""
     # create a new empty array
     b = np.empty((d,d))
@@ -35,35 +13,59 @@ def step(a):
     for i in range(d):
         for j in range(d):
             sum = 0
-            # loop over neighbours
+            # loop over neighbours: this is the very core
             for dd in nd:
                     si = i + dd[0]
                     sj = j + dd[1]
                     # check boundaries
                     if not (si < 0 or si >=d or sj < 0 or sj >= d):
                         sum += a[si,sj]
+            # !!!!!!! important !!!!!!!!!                        
             # !!! evaluate sum             
             b[i,j] = 1 if sum == 2 else 0
+            # !!!!!!! important !!!!!!!!!                        
     return b
 
 
-# In[43]:
+# main loop
+def main():
+    """Initialisation and main loop"""
+    # set dimension
+    d = 8 # dimension
 
+    # create the initial matrix
+    a = np.zeros((d,d))
+    #print(a)
 
-iters = 0
-while np.sum(a) > 0:
-    aa = a.copy() # save old value
-    a = step(a).copy() # compute new values
+    # initialize matrix with random values 
+    for i in range(d):
+        for ii in range(d):
+            a[i,ii] = np.random.randint(0,2)
     print(a)
-    # check stady state
-    if np.array_equal(aa,a):
-        print("Steady state")
-        break
-    # check iterations
-    if iters == 100:
-        print("Exit after ",iters," iterations")
-        break
-    iters += 1
 
-print("Done")
+    iters = 0
+    while True: # endless loop. We will break on certain conditions
+        aa = a.copy() # save old value
+        a = step(a,d).copy() # compute new values
+        #print("\n",a)
+        # check stady state
+        if np.array_equal(aa,a):
+            if np.sum(a) > 0:
+                print("Zombie after ",iters," iterations")
+            else:
+                print("Dead after ",iters," iterations")
+            break
+        # check iterations
+        if iters == 1000:
+            print("Still alive after ",iters," iterations")
+            break
+        iters += 1
 
+    print("Done")
+    print(a)
+
+
+# call main
+if __name__ == "__main__":
+    main()
+    
