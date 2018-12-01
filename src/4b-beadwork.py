@@ -5,6 +5,13 @@ import imageio
 import sys
 from moviepy.editor import VideoClip
 
+# inspired by http://fakugesi.co.za/vernacular-algorithms-pop-project-isea2018-durban/
+# see also http://fakugesi.co.za/wp-content/uploads/2018/06/Beadwork_Code_3.jpeg
+# and https://csdt.rpi.edu/culture/whte/beadworkalgorithm.html
+# which also links to some images and scratch examples
+# google: https://www.google.com/search?q=algorithm+beadwork&tbm=isch
+
+
 #colors
 colors = ((255,255,255),(0,0,0),(255,0,0),(0,255,0))
 # bead patterns
