@@ -1,5 +1,5 @@
 """Fundamental processing of game of live"""
-# we use numpy for 2d arraays
+# we use numpy for 2d arrays
 import numpy as np
 
 # function definition: this is the core part
@@ -17,13 +17,17 @@ def step(a,d):
             for dd in nd:
                     si = i + dd[0]
                     sj = j + dd[1]
-                    # check boundaries
-                    if not (si < 0 or si >=d or sj < 0 or sj >= d):
-                        sum += a[si,sj]
-            # !!!!!!! important !!!!!!!!!                        
-            # !!! evaluate sum             
+                    # ignore boundary pixels
+                    # if not (si < 0 or si >=d or sj < 0 or sj >= d):
+                    #     sum += a[si,sj]
+                    # alternatively, we can wrap at the boundaries
+                    si = d-1 if si < 0 else 0 if si == d else si
+                    sj = d-1 if sj < 0 else 0 if sj == d else sj
+                    sum += a[si,sj]
+            # !!!!!!! important !!!!!!!!!
+            # !!! evaluate sum
             b[i,j] = 1 if sum == 2 else 0
-            # !!!!!!! important !!!!!!!!!                        
+            # !!!!!!! important !!!!!!!!!
     return b
 
 
@@ -37,7 +41,7 @@ def main():
     a = np.zeros((d,d))
     #print(a)
 
-    # initialize matrix with random values 
+    # initialize matrix with random values
     for i in range(d):
         for ii in range(d):
             a[i,ii] = np.random.randint(0,2)
@@ -47,7 +51,10 @@ def main():
     while True: # endless loop. We will break on certain conditions
         aa = a.copy() # save old value
         a = step(a,d).copy() # compute new values
-        #print("\n",a)
+        # maybe print the first 10 iterations
+        if iters < 10:
+            print("\n",a)
+            
         # check stady state
         if np.array_equal(aa,a):
             if np.sum(a) > 0:
@@ -68,4 +75,3 @@ def main():
 # call main
 if __name__ == "__main__":
     main()
-    

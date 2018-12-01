@@ -5,12 +5,11 @@ import wave
 import sys
 import pygame
 import time
-import os
 import random
 from mpl_toolkits.mplot3d import Axes3D
 
 
-#playing and plotting data from a wave file
+# playing and plotting data from a wave file
 
 # pgame stuff related to playing sound
 pygame.mixer.pre_init(24000, size=-16, channels=1)
@@ -48,7 +47,7 @@ else:
         signal = "dqpinfqfmmdqwpdqwpdqwodmopmodpwndeniqwqwnfojqnwd"
         print("Using ", signal)
 
-    txtSignal = signal # make a copy of the text        
+    txtSignal = signal # make a copy of the text
     signal = np.fromstring(signal.upper(), "uint8")
     sigMin = min(signal)
     signal -= min(signal)
@@ -67,7 +66,7 @@ if len(signal) > 1000:
                        break
     max3d = min(len(signal), min3d + 200 )
     print("min ",min3d,", max ",max3d)
-                   
+
 #x3d = [i for i in range(min3d,max3d)]
 #y3d = [signal[i] % 10 for i in range(min3d,max3d)]
 #z3d = [signal[i] % 100 for i in range(min3d,max3d)]
@@ -85,7 +84,7 @@ ax.scatter(x3d,y3d,z3d, s= pntSize)
 
 for i in range(len(x3d)):
     ax.text(x3d[i],y3d[i],z3d[i], label3d[i], size=20)
-    
+
 plt.axis("off")
 plt.title('A pile of numbers ...')
 plt.get_current_fig_manager().full_screen_toggle()
@@ -106,7 +105,7 @@ plt.show()
 plt.figure()
 plt.title('Sequential numbers: A Wave display/timeseries...')
 plt.plot(signal)
-plt.get_current_fig_manager().full_screen_toggle() 
+plt.get_current_fig_manager().full_screen_toggle()
 plt.show()
 
 # we can also create a 2d plot in the following way
@@ -116,7 +115,7 @@ signal = signal[:int(ncols*ncols)]  # take correct number of samples
 signal2d = np.reshape(signal, (-1, int(ncols))) # reshape
 plt.imshow(signal2d) # create image
 plt.title('2D arranged numbers: An Image ...')
-plt.get_current_fig_manager().full_screen_toggle() 
+plt.get_current_fig_manager().full_screen_toggle()
 plt.show()
 
 # recalculate 3d PARMS
@@ -138,21 +137,21 @@ ha = hf.add_subplot(111, projection='3d')
 ha.plot_surface(x,y, signal2d, color='b')
 
 plt.title('3D-stlye arranged numbers: A Surface Plot ...')
-plt.get_current_fig_manager().full_screen_toggle() 
+plt.get_current_fig_manager().full_screen_toggle()
 plt.show()
 
 
 ##### text display if not wav
 if not useWav:
     label3d = ["%c" % (signal[i]+sigMin)  for i in range(min3d,max3d)]
-    pntSize = 0 
+    pntSize = 0
     fig = plt.figure()
     ax = Axes3D(fig)
     ax.scatter(x3d,y3d,z3d, s= pntSize)
 
     for i in range(len(x3d)):
         ax.text(x3d[i],y3d[i],z3d[i], label3d[i], size=20)
-        
+
     plt.axis("off")
     plt.title('A pile of numbers with encoding: characters ...')
     plt.get_current_fig_manager().full_screen_toggle()
@@ -203,7 +202,7 @@ plt.show()
 sd = pygame.mixer.Sound(longSignal[:sl])
 sd.play()
 
-#important to wait until sound finished 
+#important to wait until sound finished
 while pygame.mixer.get_busy():
     pass
 
@@ -212,7 +211,7 @@ pygame.mixer.stop()
 
 ##########################################
 # initialize speech output
-#for windows speech, we need win32 stuff 
+#for windows speech, we need win32 stuff
 import platform
 if "windows" in platform.system().lower():
     import win32api
@@ -246,7 +245,7 @@ fig.axis("off")
 plt.title('Ottos Mops hops ...')
 
 if not useWav:
-    tfig = plt.subplot(1,3,2) 
+    tfig = plt.subplot(1,3,2)
     tfig.axis("off")
     tfig.annotate(txtSignal,\
         xy=(1, 1), xytext=(.4,.8), xycoords="data", \
@@ -254,7 +253,7 @@ if not useWav:
 
     import wordcloud
     wc = wordcloud.WordCloud().generate_from_text(txtSignal)
-    wfig = plt.subplot(1,3,3) 
+    wfig = plt.subplot(1,3,3)
     wfig.axis("off")
     wfig.imshow(wc)
 
@@ -276,5 +275,4 @@ for i in range(int(nframes)):
     if i < len(lines):
         engine.say(lines[i])
         engine.runAndWait()
-    plt.pause(.1)        
-
+    plt.pause(.1)
