@@ -12,12 +12,12 @@ based upon lists ([]) and append the segment to the line
 def segment(width, color):
     """ put <width> items of color in a row"""
     # initialize a new list
-    segment = []
+    seg = []
     # add items with a FOR LOOP
     for i in range(width):
-        segment.append(color)
+        seg.append(color)
     # return the list
-    return segment
+    return seg
 
 # the main function
 def main():

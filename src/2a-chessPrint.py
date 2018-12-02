@@ -32,10 +32,22 @@ Operation
         c = a % 3  # The is the modulo operation (reminder)
         d = 5 == 6  # d is False. The double "=" means "has equal value"
 
+Block
+    Every language has it's own syntax to form group of statements. Python
+    uses indentation. All statements in sequence with the same indent level
+    are in the same block, like so:
+    if a == 4 then:
+        thing1a()   # call function thing1a in the IF branch
+        thing1b()   # same identation => same block => do also thing1b
+    else:           # same indent as the "if", previous block terminated
+        thing2()    # new block, do thing2 in the ELSE branch
+    thing3()        # not indented, previous block terminated. Thing3 is
+                    # outside the IF-ELSE block
+
 Branch
     We test a condition and do one thing when it is true and another thing
     when it is false using IF ... ELSE ... statements like:
-    if a == 4 then:
+    if a == 4:
         do thing 1
     else:
         do thing 2
@@ -49,18 +61,6 @@ Iteration (loop)
     of while a condition is true like so:
     while a < b:
         statements ...
-
-Block
-    Every language has it's own syntax to form group of statements. Python
-    uses indentation. All statements in sequence with the same indent level
-    are in the same block, like so:
-    if a == 4 then:
-        thing1a()   # call function thing1a in the IF branch
-        thing1b()   # same identation => same block => do also thing1b
-    else:           # same indent as the "if", previous block terminated
-        thing2()    # new block, do thing2 in the ELSE branch
-    thing3()        # not indented, previous block terminated. Thing3 is
-                    # outside the IF-ELSE block
 
 Function
     we use functions to execute code which is (re)used several times
@@ -83,7 +83,7 @@ def segment(width, color):
     """ print <width> items of a color """
     # add items with a FOR LOOP
     for i in range(width):
-        # print(color,end="") # simple verion
+        #print(color,end="") # simple verion
         print("{0:2d}".format(color),end="") # this looks better
 
 ########################################################################
@@ -92,7 +92,7 @@ def main():
     """create a checker board pattern using a function"""
 
     # constants (actually just variables we do not change any more)
-    fields = 8
+    fields = 4
     fieldWidth = 4
 
     # variables
@@ -103,7 +103,7 @@ def main():
     # we iterate until we are done ...
     while row < fields*fieldWidth and column < fields*fieldWidth:
         # print segment
-        segment(fieldWidth,color)
+        segment(fieldWidth, color)
         # invert color after every segment
         color = 1 if color == 0 else 0
         # increment column. go back to 0 after 8 fields

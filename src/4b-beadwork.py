@@ -12,8 +12,8 @@ from moviepy.editor import VideoClip
 # google: https://www.google.com/search?q=algorithm+beadwork&tbm=isch
 
 
-#colors
-colors = ((255,255,255),(0,0,0),(255,0,0),(0,255,0))
+# colors
+colors = ((255, 255, 255), (0, 0, 0), (255, 0, 0), (0, 255, 0))
 # bead patterns
 bead5 = np.array(((0,0,1,0,0),(0,1,1,1,0),(1,1,1,1,1),(0,1,1,1,0),(0,0,1,0,0)))
 bead7 = np.array(((0,0,1,1,1,0,0),(0,1,1,1,1,1,0),(1,1,1,1,1,1,1),(1,1,1,1,1,1,1),(1,1,1,1,1,1,1),(0,1,1,1,1,1,0),(0,0,1,1,1,0,0)))
@@ -55,10 +55,10 @@ def mkThread(y,x, s, i, d, c):
 
         mkBead(y,x+j*b,cl)
 
-        
+
 # image dimensions, depends on beads and triangle width
 W = 10 # triangle width in beds
-T = 8  # triangles in row, 
+T = 8  # triangles in row,
 R = 4  # Triangle rows. multiple of 4, normally
 M = np.shape(bead)[0]*W*R # rows
 N = np.shape(bead)[1]*W*T # cols
@@ -100,7 +100,7 @@ p1.imshow(I)
 p2 = f.add_subplot(212)
 p2.set_title("Process")
 p2.axis('off')
- 
+
 ################################
 # plot animation function
 def plotReplay(f):

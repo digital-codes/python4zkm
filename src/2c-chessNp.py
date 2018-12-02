@@ -22,20 +22,20 @@ import numpy as np
 def segment(width, color):
     """ put <width> items of color in a row"""
     # initialize a new list as a numpy array
-    segment = np.empty(width) #
+    seg = np.empty(width) #
     # add items with a FOR LOOP
     for i in range(width):
-        segment[i] = color
+        seg[i] = color
     # return the list
-    return segment
+    return seg
 
 # the main function
 def main():
     """create a checker board pattern using a function"""
 
     # constants
-    fields = 8
-    fieldWidth = 2
+    fields = 4
+    fieldWidth = 4
 
     # variables
     row = 0
