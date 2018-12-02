@@ -20,7 +20,7 @@ def dl(x,y,len=0,dir=-1,col=128):
         else:
             print("invaid direction")
     return x,y
-    
+
 # recursive line drawing
 def rdl(x,y,len=0,dir=-1,col=128):
     I[x,y,0] = col[0]
@@ -70,7 +70,7 @@ x = N//2 - 50
 y = x
 l = 20
 for i in range(10):
-    x,y = dl(x,y,l,i%4,(255,0,0))
+    x,y = dl(x,y,l,i%4,(0,0,255))
     l += 5
 
 # drawing with recursive function
@@ -80,12 +80,12 @@ l = 20
 for i in range(10):
     x,y = dl(x,y,l,i%4,(0,255,0))
     l += 5
-    
+
 
 # setting the climit is important!
 plt.imshow(I,clim=(0,255))
 plt.axis('off')
- 
+
 ##while None == plt.waitforbuttonpress(.1):
 ##    plt.draw()
 
@@ -108,10 +108,10 @@ I = np.empty((N,N,3), dtype = np.uint8)
 v = 200 # default V
 for r in range(N):
     for c in range(N):
-        I[r,c] = (r,c,v) 
+        I[r,c] = (r,c,v)
 
 # convert to RGB
-I2 = color.hsv2rgb(I)        
+I2 = color.hsv2rgb(I)
 
 # make a scaled RGB image with color resolution RGB:565
 J = np.empty((N,N,3), dtype = np.uint8)
@@ -134,14 +134,10 @@ p2 = f.add_subplot(122)
 p2.imshow(I2,clim=(0,255))
 p2.axis('off')
 p2.set_title("HSV Colors\nH down, S right\nV = 200")
- 
+
 plt.show()
 
 
 
 print("Done")
 plt.close()
-
-
-
-
