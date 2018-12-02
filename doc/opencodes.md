@@ -69,15 +69,19 @@ All code samples are in the [source](../src) folder. Files ending with .py are p
 
 Credits go to a large number of people who shared their ideas on publicly availably platforms (like this one) so I could go ahead and include or adapt code fragments together with my own ideas. Credits also go to Ernst Jandl (rights probably owned by [Luchterhand](https://www.randomhouse.de)) for the poem [Ottos Mops](../data/otto.txt) and to [Larva Labs](https://www.larvalabs.com/cryptopunks) for the [punk image](../data/punk.png). The files are copied from the depth of the internet. While giving nice results in the examples, they are neither very special, unique nor important and you can replace them with any other text or image you may find or create. Finally thanks to the person who posted the nice picture of his or her [mops dog](../data/ottos-mops.png) somewhere (I forgot where I got it from). Again, feel free to replace it with you favorite pet (make sure to get the poem right too).
 
-We start with a more general [excursion on data](../src/1-basicData.py) and their possible "interpretations". The basics of [Python programming](../src/2x-basicPython.py) are listed in a lengthy example covering the topics variables, operations, input/output, data types, functions and loops. More compact and practical examples as introduction to algorithms and programming are [CheckerBoard1](../src/chessPrint.py), [CheckerBoard2](../src/chessList.py), [CheckerBoard3](../src/chessNp.py) all dealing with creating a simple pattern and the [text version of game-of-live](../src/2b-gol-text.py). This is the foundation for the graphical version later on.
+We start with a more general [excursion on data](../src/1-basicData.py) and their possible "interpretations". The basics of [Python programming](../src/2x-basicPython.py) are listed in a lengthy example covering the topics variables, operations, input/output, data types, functions and loops. You can get full documentation about Python [here](https://docs.python.org/3.6/) and on many other sites. More compact and practical examples as introduction to algorithms and programming are [CheckerBoard1](../src/2a-chessPrint.py), [CheckerBoard2](../src/2b-chessList.py), [CheckerBoard3](../src/2c-chessNp.py) all dealing with creating a simple pattern and the [text version of game-of-live](../src/2d-gol-text.py). This is the foundation for the graphical version later on.
 
 This is followed by some simple [2D-graphics](../src/3-simpleGraphics.py) because graphics is the most dominant interface. The graphics area is then further expanded introducing [colors](../src/4-colorGraphics.py), fundamental [image processing, animations and movies](../src/6-punk.py). We link more complex image processing with the [autonomous trap](../src/7-trackSegment.py) and finally create a movie of the [beautiful Julia-set](../src/8-juliaMovie.py) 
 
-The topic of creating patterns is further expanded following a ZKM workshop on [vernacular algorithms](https://zkm.de/de/veranstaltung/2018/11/from-beadwork-to-coding-vernacular-algorithms-workshop) with [a triangle pattern code](../src/4b-beadwork.py) for a beadwork like this one
+The topic of creating patterns using graphics is further expanded following a ZKM workshop on [vernacular algorithms](https://zkm.de/de/veranstaltung/2018/11/from-beadwork-to-coding-vernacular-algorithms-workshop) with [a triangle pattern code](../src/4b-beadwork.py) for a beadwork like this one
 
-<img src="../data/beads.png" width="250" style="margin-left:50px">
+<img src="../data/beads.jpg" width="250" style="margin-left:50px">
 
-We can use different algorithm to create such pattern, for example focusing on how to [create the patterns](../data/bead_ani_tri.mp4) or how to [line up the beads](../data/bead_ani_lin.mp4). We can also do [3D visualizations]() using a 3D rendering program like [Povray](https://povray.org/). 
+We can use different algorithm to create such patterns, for example focusing on how to [create the patterns](../data/bead_ani_tri.mp4) or how to [line up the beads](../data/bead_ani_lin.mp4). We can also do 3D visualizations
+
+<img src="../data/bead3d.png" width="250" style="margin-left:50px">
+
+using a 3D rendering program like [Povray](https://povray.org/). 
 
 We studiy the principles behind [Game of life](../src/9-gol.py) and [Sound of Sorting](../src/10-soundOfSort.py) in brief examples. Despite including advanced programming mechanisms, the code should be fairly straightforward.
 
