@@ -55,6 +55,9 @@ for i in range (4):
 # you can test this in the python shell
 
 ########## test #############
+# specific pytest can be forced with 
+# py.test-version ...
+# e.g. py.test-3.6 13-blockchain.py
 def test_hash():
 	hg = hashlib.sha256()
 	print("String:",refString)
