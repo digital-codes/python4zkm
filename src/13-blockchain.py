@@ -1,14 +1,20 @@
 import hashlib
 import struct
 
-# the hash generator: sha256
+import pytest
 
-# target difficulty. Add more "0" to make it harder 
+# the hash generator: sha256
+# reference hash, create via sha256hmac -u  :
+refString = u"ottos mops trotzt\n"
+refHash = "bc607eac3d2c0949cfa2fd01a32788eec5be5b1cabb4e108326f205099349cc1"
+#
+
+# target difficulty. Add more "0" to make it harder
 difficulty = "000"
 # max number of tries to solve the difficulty
 mx = 10000000
 
-# hash function with variation of nonce to solve difficulty 
+# hash function with variation of nonce to solve difficulty
 def calc(s):
     for nonce in range(mx):
         # add a number between 1 .. 4000000000 as 32 bit string value
@@ -42,9 +48,18 @@ for i in range (4):
     h,n = calc(data)
     print("Hash: ", h)
     print("Nonce: ", n,"\n")
-    
+
 # Note the output values and verify that a small change in an early step
 # change the output of all subsequent steps
 # this feature is used to verify the operations in a block chain
 # you can test this in the python shell
+
+########## test #############
+def test_hash():
+	hg = hashlib.sha256()
+	print("String:",refString)
+	s = bytes(refString,"utf-8")
+	hg.update(s)
+	h = hg.hexdigest()
+	assert refHash == h
 
