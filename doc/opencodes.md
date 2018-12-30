@@ -80,7 +80,7 @@ The topic of creating patterns using graphics is further expanded following a ZK
 
 <img src="../data/beads.jpg" width="250" style="margin-left:50px">
 
-We can use different algorithm to create such patterns, for example focusing on how to [create the patterns](../data/bead_ani_tri.mp4) or how to [line up the beads](../data/bead_ani_lin.mp4). We can also do (3D visualizations](../data/bead3d.webm)
+We can use different algorithm to create such patterns, for example focusing on how to [create the patterns](../data/bead_ani_tri.mp4) or how to [line up the beads](../data/bead_ani_lin.mp4). We can also do [3D visualizations](../data/bead3d.webm)
 
 <img src="../data/bead3d.png" width="250" style="margin-left:50px">
 
