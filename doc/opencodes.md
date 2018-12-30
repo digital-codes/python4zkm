@@ -20,7 +20,10 @@ Interfaces to taste, smell, skin sensing and balance are by far not on-par with 
 ## Artworks and Topics
 The topic "data" is introduced by the installation of <a name="dfield">Weibel and Lölkes</a>: [The World as a Field of Data](https://zkm.de/de/ausstellung/2017/10/open-codes). Data are taken from a large number of publicly available feeds and displayed in a (more or less) uniform style.
 
+<img src="../data/fieldOfData.jpg" width="250" style="margin-left:50px">
+<!--  no longer available:
 <img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/40661157_10155767726086964_5582587217051648000_o.jpg?_nc_cat=0&oh=04b91aae92a54735eaaacc33b5484c29&oe=5C1DB4BC" width="250" style="margin-left:50px">
+-->
 
 > The vast number of electronic interfaces like smartphones, computers, and screens, which accompany people every day in doctors’ surgeries, at home, in offices, at the stock exchange, airports, or railway stations, is overwhelming proof that navigating by the sun, moon, and stars has long since been replaced by satellites and other technological instruments. People living in the digital age don’t navigate by the position of the stars and sun; they follow where digital devices lead them, which receive information from the cell tower on the horizon and orbiting satellites in space. The installation The World as a Field of Data confronts us with this field of data that accompanies us around the clock in a deliberately exaggerated way. Data fields are omnipresent. All the information that is generated as a result of our interaction on the Net and in the real world are assembled on around 40 screens, which hang in the air as a data cloud at ZKM’s Atrium 8.
  
