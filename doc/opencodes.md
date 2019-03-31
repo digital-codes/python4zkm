@@ -29,7 +29,7 @@ The topic "data" is introduced by the installation of <a name="dfield">Weibel an
  
  Refik Anadol uses EEG-data from a human brain to generate an optical visualization in [Melting Memories](https://zkm.de/de/melting-memories). This requires advanced visualization techniques and demonstrates a variety of contexts in which we can use the same data. 
  
- <img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/40758217_10155767726166964_3859932704288014336_o.jpg?_nc_cat=0&oh=f3d7ec1f3f354e4a39b6515e2eca8208&oe=5C36FD28" width="250" style="margin-left:50px">
+ <img src="https://www.thisiscolossal.com/wp-content/uploads/2018/04/brain-og-2.jpg" width="250" style="margin-left:50px">
  
 > Melting Memories debuts new advances in technology that enable visitors to experience aesthetic interpretations of motor movements inside a human brain. The work grows out of the artist’s experiments with the advanced technology tools provided by the Neuroscape Laboratory at the University of California, San Francisco. Neuroscape is a neuroscience center focusing on technology creation and scientific research on brain function of both healthy and impaired individuals. Anadol gathers data on the neural mechanisms of cognitive control from an EEG (electroencephalogram) that measures changes in brain wave activity and provides evidence of how the brain functions over time. These data sets constitute the foundation for the unique algorithms that the artist needs for the multidimensional visual structure on display.
 
