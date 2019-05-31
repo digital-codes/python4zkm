@@ -22,6 +22,7 @@ fileBase = "../data/otto"  # zkmaudio
 wavFile = fileBase + ".wav"
 txtFile = fileBase + ".txt"
 
+signal = []
 
 # plotly output looks nice for the wav file
 
@@ -47,10 +48,13 @@ else:
         signal = "dqpinfqfmmdqwpdqwpdqwodmopmodpwndeniqwqwnfojqnwd"
         print("Using ", signal)
 
+    signal = signal.upper()
     txtSignal = signal # make a copy of the text
-    signal = np.fromstring(signal.upper(), "uint8")
+    #signal = np.fromstring(signal, "uint8")
+    #fromstrig deprecated
+    signal = np.frombuffer(memoryview(bytes(signal,"utf-8")), "uint8")
     sigMin = min(signal)
-    signal -= min(signal)
+    signal = signal - min(signal) # frombuffer creates immutable
     signal = np.clip(signal,0,100)
     #signal -= int(np.mean(signal))
 
