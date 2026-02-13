@@ -1,7 +1,8 @@
 # my private file
 private.py
-ideas.txt
-github.txt
+
+# txt files in a repository root folder
+/*.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
