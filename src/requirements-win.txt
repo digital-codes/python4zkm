@@ -1,4 +1,4 @@
-pywin32==223
+pywin32==301
 numpy==1.14.5
 Pillow==12.1.1
 feedparser==5.2.1
