@@ -1,5 +1,5 @@
 pywin32==301
-numpy==1.14.5
+numpy==1.22.0
 Pillow==12.2.0
 feedparser==5.2.1
 html2text==2018.1.9
